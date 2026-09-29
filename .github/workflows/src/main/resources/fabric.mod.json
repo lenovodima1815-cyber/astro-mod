@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "astro",
+  "version": "1.0.0",
+  "name": "Astro Mod",
+  "description": "Astro portal and secret dungeon blocks mod.",
+  "authors": ["You"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.astro.AstroMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
