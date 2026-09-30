@@ -34,7 +34,9 @@ public class AstroMod implements ModInitializer {
                     if (player instanceof ServerPlayerEntity serverPlayer) {
                         BlockPos dungeonCenter = new BlockPos(1000, 100, 1000);
                         generateDungeon(world, dungeonCenter);
-                        serverPlayer.teleport(world.getServer().getOverworld(), dungeonCenter.getX() + 0.5, dungeonCenter.getY() + 1, dungeonCenter.getZ() + 0.5, serverPlayer.getYaw(), serverPlayer.getPitch());
+                        
+                        serverPlayer.requestTeleport(dungeonCenter.getX() + 0.5, dungeonCenter.getY() + 1.0, dungeonCenter.getZ() + 0.5);
+                        
                         world.playSound(null, dungeonCenter, SoundEvents.BLOCK_PORTAL_TRAVEL, SoundCategory.PLAYERS, 1.0f, 1.0f);
                         return ActionResult.SUCCESS;
                     }
